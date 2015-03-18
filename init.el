@@ -53,7 +53,7 @@
   "b" 'ido-switch-buffer
   "B" 'ibuffer
   "k" 'kill-this-buffer
-  "k" 'kill-buffer
+  "K" 'kill-buffer
   "x" 'smex
   "rm" 'bookmark-set
   "rl" 'bookmark-bmenu-list
