@@ -58,8 +58,7 @@
   "w" 'switch-window
   "rm" 'bookmark-set
   "rl" 'bookmark-bmenu-list
-  "rb" 'bookmark-jump
-  "w" 'switch-window)
+  "rb" 'bookmark-jump)
 (require 'evil)
 (setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
 (setq evil-emacs-state-modes nil)
