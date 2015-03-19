@@ -55,6 +55,7 @@
   "k" 'kill-this-buffer
   "K" 'kill-buffer
   "x" 'smex
+  "w" 'switch-window
   "rm" 'bookmark-set
   "rl" 'bookmark-bmenu-list
   "rb" 'bookmark-jump
