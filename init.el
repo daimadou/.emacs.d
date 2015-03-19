@@ -57,7 +57,8 @@
   "x" 'smex
   "rm" 'bookmark-set
   "rl" 'bookmark-bmenu-list
-  "rb" 'bookmark-jump)
+  "rb" 'bookmark-jump
+  "w" 'switch-window)
 (require 'evil)
 (setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
 (setq evil-emacs-state-modes nil)
@@ -190,6 +191,11 @@
 (require 'bookmark)
 (setq bookmark-save-flag 1) ; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag t) 
-(setq inhibit-splash-screen t)
-(bookmark-bmenu-list)
-(switch-to-buffer "*Bookmark List*")
+;;open book mark
+;;(setq inhibit-splash-screen t)
+;;(bookmark-bmenu-list)
+;;(switch-to-buffer "*Bookmark List*")
+
+
+;; save/restore opened files and windows config
+(desktop-save-mode 1) ; 0 for off
