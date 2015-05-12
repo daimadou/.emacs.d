@@ -79,15 +79,30 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; speical grep config for windows
-(setq grep-find-command '("findstr /spinr  *" . 16))
+(if (eq system-type 'windows-nt)
+    (setq grep-find-command '("findstr /spinr  *" . 16)
+
+
+    (add-to-list 'exec-path "~/.emacs.d/aspell/bin/")
+    (setq ispell-program-name "aspell")
+    (ispell-change-dictionary "american" t)
+
+    (setq racket-racket-program "C:/Racket/Racket.exe")
+    (setq racket-raco-program "C:/Racket/raco.exe")
+    (require 'racket-mode)
+    (add-hook 'racket-mode-hook
+    (lambda ()
+        (paredit-mode 1)))
+
+    (add-hook 'racket-mode-hook #'rainbow-delimiters-mode)
+    (add-hook 'racket-mode-hook
+            (lambda ()
+                (define-key racket-mode-map (kbd "C-c r") 'racket-run)))))
 
 ;; turn off tool bar
 (tool-bar-mode 0)
 
 ;;aspell config
-(add-to-list 'exec-path "~/.emacs.d/aspell/bin/")
-(setq ispell-program-name "aspell")
-(ispell-change-dictionary "american" t)
 
 ;; company mode 
 (add-hook 'after-init-hook 'global-company-mode)
@@ -118,17 +133,6 @@
 (setq org-log-done t)
 
 ;;require mode
-(setq racket-racket-program "C:/Racket/Racket.exe")
-(setq racket-raco-program "C:/Racket/raco.exe")
-(require 'racket-mode)
-(add-hook 'racket-mode-hook
-  (lambda ()
-    (paredit-mode 1)))
-
-(add-hook 'racket-mode-hook #'rainbow-delimiters-mode)
-(add-hook 'racket-mode-hook
-          (lambda ()
-            (define-key racket-mode-map (kbd "C-c r") 'racket-run)))
 
 ;;NeoTree config
 (require 'neotree)
