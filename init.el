@@ -10,7 +10,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 120 :width normal))))
+(if (eq system-type 'windows-nt)
+ '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
  '(highlight ((t (:background "#073642"))))
  '(linum-highlight-face ((t (:inherit default :foreground "yellow"))))
  '(show-paren-match ((t (:background "gray" :foreground "snow" :inverse-video nil :underline nil :slant normal :weight bold)))))
@@ -23,6 +24,7 @@
              t)
 
 (setq ring-bell-function 'ignore)
+(setq inhibit-startup-message t)
 ;;----------------------------------------------------------------------------
 ;; Less GC, more memory
 ;;----------------------------------------------------------------------------
@@ -30,8 +32,8 @@
 ;; (gc-cons-threshold == 800000).
 ;; we increase this to 512MB
 ;; @see http://www.gnu.org/software/emacs/manual/html_node/elisp/Garbage-Collection.html
-(setq-default gc-cons-threshold (* 1024 1024 512)
-              gc-cons-percentage 0.5)
+;;(setq-default gc-cons-threshold (* 1024 1024 512)
+;;              gc-cons-percentage 0.5)
 
 (setq package-enable-at-startup nil)
 (package-initialize)

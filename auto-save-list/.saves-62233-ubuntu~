@@ -1,0 +1,12 @@
+/home/zhizhu/mit_os/6.828/lab/kern/console.c
+/home/zhizhu/mit_os/6.828/lab/kern/#console.c#
+/home/zhizhu/mit_os/6.828/lab/lib/printfmt.c
+/home/zhizhu/mit_os/6.828/lab/lib/#printfmt.c#
+/home/zhizhu/mit_os/6.828/lab/obj/kern/kernel.asm
+/home/zhizhu/mit_os/6.828/lab/obj/kern/#kernel.asm#
+/home/zhizhu/mit_os/6.828/lab/kern/kernel.ld
+/home/zhizhu/mit_os/6.828/lab/kern/#kernel.ld#
+/home/zhizhu/mit_os/6.828/lab/boot/main.c
+/home/zhizhu/mit_os/6.828/lab/boot/#main.c#
+/home/zhizhu/mit_os/6.828/lab/obj/boot/boot.asm
+/home/zhizhu/mit_os/6.828/lab/obj/boot/#boot.asm#
