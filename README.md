@@ -1,3 +1,3 @@
 # .emacs.d
-This is just a small reeadme for my emacs config
+This is just a small readme for my emacs config
 
