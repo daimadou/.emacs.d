@@ -36,6 +36,7 @@
 ;;              gc-cons-percentage 0.5)
 
 (setq package-enable-at-startup nil)
+(scroll-bar-mode -1)
 (package-initialize)
 
 (setq frame-title-format "emacs@%b")  
@@ -119,14 +120,13 @@
              ;...
    ))
 
-;;smart tab
-(require 'cc-mode)
+;;tab config
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+(setq-default tab-width 4)
+(setq indent-line-function `insert-tab)
 (setq c-default-style "linux"
       c-basic-offset 4)
-(setq-default indent-tabs-mode nil)
-;;smart tab for CCMode
- ; or any other preferred value
-
 
 ;;org mode
 (require 'org)
