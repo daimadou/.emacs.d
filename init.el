@@ -100,7 +100,7 @@
     (add-hook 'racket-mode-hook #'rainbow-delimiters-mode)
     (add-hook 'racket-mode-hook
             (lambda ()
-                (define-key racket-mode-map (kbd "C-c r") 'racket-run)))))
+                (define-key racket-mode-map (kbd "C-c r") 'racket-run))))
 
 ;; turn off tool bar
 (tool-bar-mode 0)
@@ -144,8 +144,8 @@
 ;;Dirs 
 (setq dired-dwim-target t)
 ;; allow dired to be able to delete or copy a whole dir.
-(setq dired-recursive-copies (quote always)) ; ¡°always¡± means no asking
-(setq dired-recursive-deletes (quote top)) ; ¡°top¡± means ask once
+(setq dired-recursive-copies (quote always)) ; Â¡Â°alwaysÂ¡Â± means no asking
+(setq dired-recursive-deletes (quote top)) ; Â¡Â°topÂ¡Â± means ask once
 (require 'dired-x)
 
 ;;switch-windows
