@@ -83,7 +83,7 @@
 
 ;; speical grep config for windows
 (if (eq system-type 'windows-nt)
-    (setq grep-find-command '("findstr /spinr  *" . 16)
+    (setq grep-find-command '("findstr /spinr  *" . 16))
 
 
     (add-to-list 'exec-path "~/.emacs.d/aspell/bin/")
